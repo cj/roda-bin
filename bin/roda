@@ -32,5 +32,5 @@ end
 Gem.clear_paths
 
 Clap.run ARGV,
-  "server" => -> { Roda::Bin.server },
-  "s"      => -> { Roda::Bin.server }
+  "server" => -> { Roda::BIN.server },
+  "s"      => -> { Roda::BIN.server }
