@@ -10,7 +10,7 @@ end
 
 require "clap"
 $LOAD_PATH << File.expand_path(File.join(File.dirname(__FILE__), "../lib"))
-require 'roda/bin/cli'
+require 'roda/bin'
 
 env      = '.env'
 rack_env = "#{env}.#{ENV['RACK_ENV']}"

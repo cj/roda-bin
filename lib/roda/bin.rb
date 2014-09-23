@@ -1,4 +1,5 @@
 require "roda/bin/version"
+require 'rerun'
 
 class Roda
   module BIN
@@ -14,10 +15,10 @@ class Roda
         cmd: args.join(' '),
         signal: 'TERM',
         growl: true,
-        name: 'BrowserIO',
+        name: 'Roda BIN',
         ignore: [],
         dir: ["."],
-        pattern: "**/*.{rb,js,coffee,css,scss,sass,styl,erb,html,haml,ru,yml,slim,md}"
+        pattern: "{Gemfile,.gems,.env*,config.ru,Rakefile,**/*.{rb,js,coffee,css,scss,sass,styl,erb,html,haml,ru,yml,slim,md,mab,rake}}"
       }
 
       Rerun::Runner.keep_running(options[:cmd], options)
