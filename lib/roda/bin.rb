@@ -15,7 +15,7 @@ class Roda
         cmd: args.join(' '),
         signal: 'TERM',
         growl: true,
-        name: 'Roda BIN',
+        name: 'Roda Server',
         ignore: [],
         dir: ["."],
         pattern: "{Gemfile,Gemfile.lock,.gems,.env*,config.ru,Rakefile,**/*.{rb,js,coffee,css,scss,sass,styl,erb,html,haml,ru,yml,slim,md,mab,rake}}"
