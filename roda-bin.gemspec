@@ -18,10 +18,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "roda"
-  spec.add_dependency "clap"
-  spec.add_dependency "rerun-cj"
-  spec.add_dependency "thin"
+  spec.add_runtime_dependency "roda"
+  spec.add_runtime_dependency "clap"
+  spec.add_runtime_dependency "rerun-cj"
+  spec.add_runtime_dependency "thin"
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
 end
