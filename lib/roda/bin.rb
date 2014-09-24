@@ -14,7 +14,7 @@ class Roda
       options = {
         cmd: args.join(' '),
         signal: 'TERM',
-        growl: true,
+        growl: false,
         name: 'Roda Server',
         ignore: [],
         dir: ["."],
