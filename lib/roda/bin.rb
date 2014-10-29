@@ -18,7 +18,7 @@ class Roda
         name: 'Roda Server',
         ignore: [],
         dir: ["."],
-        pattern: "{Gemfile,Gemfile.lock,.gems,.env*,config.ru,Rakefile,**/*.{rb,js,coffee,css,scss,sass,styl,erb,html,haml,ru,yml,slim,md,mab,rake}}"
+        pattern: "{Gemfile,Gemfile.lock,.gems,.bundle,.env*,config.ru,Rakefile,**/*.{rb,js,coffee,css,scss,sass,styl,erb,html,haml,ru,yml,slim,md,mab,rake}}"
       }
 
       Rerun::Runner.keep_running(options[:cmd], options)
