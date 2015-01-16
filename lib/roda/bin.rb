@@ -7,7 +7,7 @@ class Roda
 
     def server
       args = [
-        'thin', 'start', '--threaded', '--max-persistent-conns', '300',
+        '-b', 'thin', 'start', '--threaded', '--max-persistent-conns', '300',
         "--max-conns", "400", "-p", "8080"
       ].concat(argv)
 
