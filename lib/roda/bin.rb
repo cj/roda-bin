@@ -7,13 +7,14 @@ class Roda
 
     def server
       args = [
-        '-b', 'thin', 'start', '--threaded', '--max-persistent-conns', '300',
+        'thin', 'start', '--threaded', '--max-persistent-conns', '300',
         "--max-conns", "400", "-p", "8080"
       ].concat(argv)
 
       options = {
         cmd: args.join(' '),
         signal: 'TERM',
+        background: true,
         growl: false,
         name: 'Roda Server',
         ignore: [],
