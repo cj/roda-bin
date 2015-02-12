@@ -12,25 +12,6 @@ require "clap"
 $LOAD_PATH << File.expand_path(File.join(File.dirname(__FILE__), "../lib"))
 require 'roda/bin'
 
-env      = '.env'
-rack_env = "#{env}.#{ENV['RACK_ENV']}"
-
-if File.file? env
-  File.foreach env do |line|
-    key, value = line.split "=", 2
-    ENV[key] = value.gsub('\n', '').strip
-  end
-end
-
-if File.file? rack_env
-  File.foreach rack_env do |line|
-    key, value = line.split "=", 2
-    ENV[key] = value.gsub('\n', '').strip
-  end
-end
-
-Gem.clear_paths
-
 Clap.run ARGV,
   "server" => -> { Roda::BIN.server },
   "s"      => -> { Roda::BIN.server }
