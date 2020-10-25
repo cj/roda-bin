@@ -1,6 +1,7 @@
 # Roda::Bin
 
-TODO: Write a gem description
+Roda::Bin adds a bin/roda command line executable to run a simple development
+server that automatically reloads on changes to the project file.
 
 ## Installation
 
@@ -18,9 +19,25 @@ Or install it yourself as:
 
     $ gem install roda-bin
 
+If you're working on a BSD Unix system, add this to the Gemfile:
+
+```ruby
+require 'rbconfig'
+if RbConfig::CONFIG['target_os'] =~ /(?i-mx:bsd|dragonfly)/
+  gem 'rb-kqueue', '>= 0.2'
+end
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+In a terminal, run this command:
+
+    $ roda server
+
+It will tell you what address to load in your browser, and how to kill the
+daemon:
+
+    Listening on 0.0.0.0:8080, CTRL+C to stop
 
 ## Contributing
 
